@@ -1,10 +1,10 @@
 server:
-  port: ${PORT:8761}
+  port: 8010
 eureka:
   instance:
-    hostname: pds-ppi.herokuapp.com
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}
