@@ -20,11 +20,9 @@ spring:
       client:
         url: http://localhost:8030
 eureka:
-  instance:
-    hostname: microservice.herokuapp.com
   client:
     serviceUrl:
-      defaultZone: http://pds-ppi.herokuapp.com:8761/eureka/
+      defaultZone: https://pds-ppi.herokuapp.com/eureka/
 management:
   endpoints:
     web:
