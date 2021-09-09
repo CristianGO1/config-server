@@ -22,7 +22,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://pds-ppi.herokuapp.com/eureka
+      defaultZone: http://localhost:8010/eureka
 management:
   endpoints:
     web:
