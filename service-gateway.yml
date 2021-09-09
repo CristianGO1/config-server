@@ -1,0 +1,29 @@
+server:
+  port: 8020
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service-bookings
+          uri: lb://service-bookings
+          predicates:
+            - Path=/booking/**
+        - id: service-movies
+          uri: lb://service-movies
+          predicates:
+            - Path=/movie/**
+        - id: service-showtimes
+          uri: lb://service-showtimes
+          predicates:
+            - Path=/showtime/**
+        - id: service-users
+          uri: lb://service-users
+          predicates:
+            - Path=/user/**
