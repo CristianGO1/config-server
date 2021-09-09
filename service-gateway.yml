@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8010/eureka
+      defaultZone: http://pds-ppi.herokuapp.com/eureka
 spring:
   cloud:
     gateway:
